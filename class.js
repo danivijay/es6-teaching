@@ -6,6 +6,9 @@ class Person {
   sentence() {
     console.log(`${this.name} is ${this.age} years old`) 
   }
+  getName() {
+    return this.name
+  }
 }
 
 class Employee extends Person {
@@ -17,6 +20,9 @@ class Employee extends Person {
   quit() {
     console.log('I quit my job')
     this.years = 0
+  }
+  getName() {
+    return super.getName()  + '!'
   }
 }
 
@@ -42,5 +48,7 @@ don.sentence()
 
 dani.quit()
 dani
+
+console.log(dani.getName())
 
 
